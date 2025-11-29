@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: white;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    color:rgb(133, 25, 71);
+}
+
+/* Блок меню */
+.header {
+    padding: 10px;
+    background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+.main {
+    margin-top: 120px; 
+}
+.nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+    margin-top: 20px;
+}
+.nav a {
+    color:  white;
+    text-decoration: none;
+    padding: 10px 16px;
+    background-color: rgb(174, 128, 148);
+    border-radius: 15px;
+    transition: 1s;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav a:hover {
+    background-color: rgb(139, 102, 118);
+    padding: 12px 18px;
+    transition: 1s;
+}
+
+/* Блок контента номер 1 */
+.general {
+    margin: 15px;
+    background-color: white;
+    color:rgb(133, 25, 71);
+    padding: 60px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.left {
+    margin-right: 20px;
+    transform: translateX(-100px);
+    animation: slideInFromLeft 1s ease-out 4s forwards;
+} 
+.left button {
+    background-color: rgb(133, 25, 71);
+    color: white;
+    padding: 8px 14px;
+    margin-top: 15px;
+    border-radius: 15px;
+    transition: 1s;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left button:hover {
+    background-color: rgba(148, 187, 233, 1);
+    padding: 10px 16px;
+    transition: 1s;
+}
+.right {
+    width: 600px;
+    transform: translateX(100px);
+    animation: slideInFromRight 1s ease-out 4s forwards;
+}
+.right img {
+    border-radius: 10px;
+    transition: 1s;
+}
+.right img:hover {
+    border-radius: 60px;
+    transition: 1s;
+}
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Блок контента номер 2 */
+.content1 {
+    margin: 15px;
+    background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    padding: 60px 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 40px;
+    flex-wrap: wrap; 
+}
+.card1 {
+    background-color: white;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 300px; 
+    text-align: center;
+    padding: 20px;
+    transition: 1s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card1:hover {
+    background-color: rgba(148, 187, 233, 1);
+    border-radius: 15px;
+    transition: 1s;
+}
+.card1 img {
+    border-radius: 10px;
+}
+.card1 button {
+    background-color: rgb(133, 25, 71);
+    color: white;
+    padding: 8px 14px;
+    margin-top: 15px;
+    border-radius: 15px;
+    transition: 1s;
+    font-weight: bold;
+    text-align: center;
+
+    display: inline-block;
+}
+.card1 button:hover {
+    background-color: rgba(148, 187, 233, 1);
+    padding: 10px 16px;
+    transition: 1s;
+}
+
+/* Блок контента номер 3 */
+.content2 {
+    margin: 15px;
+    background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    padding: 60px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.content2 h1 {
+    margin-bottom: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 30px; 
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card2 {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card2 img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.card2 h3 {
+    margin-bottom: 15px;
+}
+
+.card2 p {
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+/* Блок футера */
+.footer {
+    text-align: center;
+    background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    padding: 30px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+.btn {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid #e13b83;
+    z-index: 1000;
+}
+.footer-bottom {
+    background-color: white;
+    border-radius: 15px;
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        gap: 40px;
+    }
+    
+    .nav a {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+    
+    .general {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .left {
+        margin-right: 0;
+        margin-bottom: 30px;
+        transform: translateX(-50px);
+    }
+    
+    .right {
+        width: 100%;
+        max-width: 500px;
+        transform: translateX(50px);
+    }
+    
+    .content1 {
+        padding: 40px 15px;
+        gap: 20px;
+    }
+    
+    .card1 {
+        max-width: 45%;
+        min-width: 250px;
+    }
+    
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .card2 {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 15px 10px;
+        position: relative;
+    }
+    
+    .main {
+        margin-top: 20px;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 0;
+        align-items: center;
+    }
+    
+    .nav a {
+        width: 200px;
+        padding: 12px 20px;
+    }
+    
+    .nav a:hover {
+        padding: 14px 22px;
+    }
+    
+    .general {
+        margin: 10px;
+        padding: 30px 15px;
+    }
+    
+    .left h1 {
+        font-size: 1.8rem;
+    }
+    
+    .left p {
+        font-size: 1rem;
+    }
+    
+    .right {
+        max-width: 100%;
+    }
+    
+    .right img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .content1 {
+        margin: 10px;
+        padding: 30px 15px;
+        gap: 20px;
+    }
+    
+    .card1 {
+        max-width: 100%;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .content2 {
+        margin: 10px;
+        padding: 30px 15px;
+    }
+    
+    .content2 h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .card2 {
+        padding: 20px 15px;
+    }
+    
+    .card2 img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .footer {
+        padding: 20px 15px;
+    }
+    
+    .btn {
+        left: 15px;
+        bottom: 15px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
